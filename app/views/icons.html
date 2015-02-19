@@ -1,0 +1,52 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    Icons
+    <small>List of icons availables.</small>
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="/#/">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a>Icons</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+    </ul>
+</div>
+<!-- BEGIN PAGE CONTENT-->
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="tabbable tabbable-custom tabbable-noborder">
+
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a data-toggle="tab"
+                       ng-class="{'pure-button-active': activeTab === 'tab1'}"
+                       ng-click="switchTabTo('tab1')">
+                        Fontawesome Icons </a>
+                </li>
+                <li>
+                    <a data-toggle="tab"
+                       ng-class="{'pure-button-active': activeTab === 'tab2'}"
+                       ng-click="switchTabTo('tab2')">
+                        Simple Line Icons </a>
+                </li>
+                <li>
+                    <a data-toggle="tab"
+                       ng-class="{'pure-button-active': activeTab === 'tab3'}"
+                       ng-click="switchTabTo('tab3')">
+                        Glyphicons </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div ng-include="tabTemplates[activeTab]">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
